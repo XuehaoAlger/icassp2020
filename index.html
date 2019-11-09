@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="google-site-verification" content="ftFOlJETX-2KNjaPh8W6s8lhigItRuu9fOmjHZZ0nY0" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Cross-lingual Voice Conversion</title>
+</head>
+<style type="text/css">
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  audio {
+    width: 100%;
+  }
+
+  thead>tr>th:first-child {
+    width: 96px;
+  }
+
+  @media (max-width: 767px) {
+    .big-screen {
+      display: none;
+    }
+  }
+
+  @media (min-width: 767px) {
+    .small-screen {
+      display: none;
+    }
+  }
+</style>
+
+<body>
+  <header class="header">
+    <div class="jumbotron bg-secondary text-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-12">
+            <h2><a class="text-light">
+              A MODULARIZED NEURAL NETWORK
+              WITH LANGUAGE-SPECIFIC<br> OUTPUT LAYERS FOR CROSS-LINGUAL VOICE CONVERSION </a></h2>
+            <p>
+              <div class="row">
+              </div>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row" id="result">
+        <div class="col-md-12">
+          <h2>Speech Samples</h2>
+          <hr>
+          <p>The model is evaluated with bilingual speakers from:<br> 
+            the EMIME Mandarin Bilingual Database [<a class="text-success" href="#1">1</a>]:</p>
+          <hr>
+                <p>
+                  There are 4 systems implemented for comparison:<br>
+                  (1) <b>bPPG-LI</b> (baseline):<br> The cross-lingual voice conversion system using bilingual PPG (bPPG) with a single language-independent (LI) output layer.<br>
+                  (2) <b>mPPG-LI</b>:<br> The cross-lingual voice conversion system using mixed-lingual PPG (mPPG) with a single language-independent (LI) output layer.<br>
+                  (3) <b>bPPG-LS</b>:<br> The cross-lingual voice conversion system using bilingual PPG (bPPG) with language-specific (LS) output layers.<br>
+                  (4) <b>mPPG-LS</b>:<br> The cross-lingual voice conversion system using mixed-lingual PPG (mPPG) with language-specific (LS) output layers.
+                </p>
+          <hr>
+          <p>
+            <b>en &rarr; cn</b>:<br>
+            we are converting an English source utterance to a Mandarin target speaker's voice.<br>
+            <b>cn &rarr; en</b>:<br> 
+            we are converting a Mandarin source utterance to an English target speaker's voice.<br>
+           
+            <hr>
+            <b>F</b> : Female Speaker <br>
+            <b>M</b> : Male Speaker 
+            </p>
+          
+<!--           <h3><small>Enable a Monolingual Mandarin Speaker to Speak English</small></h3>
+          
+                  <h4><small>en &rarr; cn</small></h4> -->
+                  <div class="big-screen">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>cn (F) &rarr; en (M)</th>
+                          <th>cn (M) &rarr; en (F)</th>
+                          <th>en (F) &rarr; cn (M)</th>
+                          <th>en (M) &rarr; cn (F)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Source    </th>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/source/1.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/source/2.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/source/3.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/source/4.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          </tr>
+                        <tr>
+                          <th scope="row">Target    </th>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/target/1.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/target/2.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/target/3.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/target/4.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          </tr>
+                        <tr>
+                          <th scope="row">bPPG-LI</th>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/bPPG-LI/1.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/bPPG-LI/2.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/bPPG-LI/3.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/bPPG-LI/4.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          </tr>
+                        <tr>
+                          <th scope="colmun">mPPG-LI</th>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/mPPG-LI/1.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/mPPG-LI/2.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/mPPG-LI/3.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/mPPG-LI/4.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          </tr>
+                        <tr>
+                           <th scope="column">bPPG-LS</th>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/bPPG-LS/1.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/bPPG-LS/2.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/bPPG-LS/3.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/bPPG-LS/4.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          </tr>
+                        <tr>
+                          <th scope="column" nowrap>mPPG-LS</th>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/mPPG-LS/1.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/mPPG-LS/2.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/mPPG-LS/3.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/mPPG-LS/4.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                        </tr>
+                   
+                       
+                      </tbody>
+                    </table>
+                  </div>
+                 
+        </div>
+      </div>
+      <hr>
+      <div class="row" id="ref">
+        <div class="col">
+          <h2>References</h2>
+          <div>
+            <p>
+              <a name="1">[1]</a>
+               Mirjam Wester and Hui Liang, “The emime mandarin bilingual database,” Tech. Rep. EDI-INF-RR-1396, The 
+               University of Edinburgh, 2011.
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- <div class="row" id="contact">
+          <div class="col">
+            <h2>Contact</h2>
+            <div></div>
+          </div>
+        </div> -->
+    </div>
+  </main>
+  <footer class="bg-secondary text-light mt-4 pt-3 pb-2 ">
+    <div class="container">
+      <p class="text-center">
+        
+      </p>
+    </div>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
