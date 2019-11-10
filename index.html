@@ -65,14 +65,13 @@
         <div class="col-md-12">
           <h2>Speech Samples</h2>
           <hr>
-          <p>The model is evaluated with bilingual database provided by Data-baker
+          <p>The model is evaluated with bilingual database provided by Data-baker.
           <hr>
                 <p>
-                  There are 4 systems implemented for comparison:<br>
-                  (1) <b>bPPG-LI</b> (baseline):<br> The cross-lingual voice conversion system using bilingual PPG (bPPG) with a single language-independent (LI) output layer.<br>
-                  (2) <b>mPPG-LI</b>:<br> The cross-lingual voice conversion system using mixed-lingual PPG (mPPG) with a single language-independent (LI) output layer.<br>
-                  (3) <b>bPPG-LS</b>:<br> The cross-lingual voice conversion system using bilingual PPG (bPPG) with language-specific (LS) output layers.<br>
-                  (4) <b>mPPG-LS</b>:<br> The cross-lingual voice conversion system using mixed-lingual PPG (mPPG) with language-specific (LS) output layers.
+                  There are three systems implemented for comparison:<br>
+                  (1) <b>T2</b> (baseline):<br> Tacotron2 system conditioned on speaker embedding.<br>
+                  (2) <b>RES-ENC</b>(baseline):<br> Tacotron2 system with residual encoder conditioned on speaker embedding.<br>
+                  (3) <b>CLWE</b>(proposed):<br> Residual encoder augmented with cross-lingual word embedding conditioned on speaker embedding.<br>
                 </p>
           <hr>
           <p>
