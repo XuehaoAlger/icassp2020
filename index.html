@@ -68,10 +68,11 @@
           <p>The model is evaluated with bilingual database provided by Data-baker.
           <hr>
                 <p>
-                  There are three systems implemented for comparison:<br>
+                  Systems Comparison:<br>
                   (1) <b>T2</b> (baseline):<br> Tacotron2 system conditioned on speaker embedding.<br>
                   (2) <b>RES-ENC</b>(baseline):<br> Tacotron2 system with residual encoder conditioned on speaker embedding.<br>
                   (3) <b>CLWE</b>(proposed):<br> Residual encoder augmented with cross-lingual word embedding conditioned on speaker embedding.<br>
+                  (4) <b>GT</b>:<br> Ground truth audio samples
                 </p>
           <hr>
                 <p>
@@ -79,6 +80,7 @@
                   (1) <b>CN-Apt</b>:<br> Adaptation of average model conditioned on speaker embedding using Mandarin utterances<br>
                   (2) <b>EN-Apt</b>:<br> Adaptation of average model conditioned on speaker embedding using English utterances.<br>
                   (3) <b>MIX-Apt</b>:<br> Adaptation of average model conditioned on speaker embedding using Mandarin and English utterances.<br>
+                  <b>Note</b>: I-vec refers to average model conditioned on speaker embedding without adaptation 
                 </p>
            
 <!--           <h3><small>Enable a Monolingual Mandarin Speaker to Speak English</small></h3>
